@@ -14,7 +14,9 @@ different IP range and may well not be -- worth revisiting once the repo
 is on GitHub with Actions wired up.
 
 USAGE
-    python scripts/sync_citation_stats.py [--cv PATH]
+    python scripts/sync_citation_stats.py --cv PATH
+    (or set the WACI_CV_PATH environment variable instead of passing --cv;
+    only needed if the Scholar fetch fails and it falls back to the CV)
 """
 import argparse
 import re
@@ -71,6 +73,11 @@ def main():
 
     result = try_scholar()
     if result is None:
+        if not args.cv:
+            sys.exit(
+                "Scholar fetch failed and no CV path given. Pass --cv PATH or "
+                "set the WACI_CV_PATH environment variable."
+            )
         result = try_cv(args.cv)
     if result is None:
         sys.exit("Could not get citation stats from either Scholar or the CV.")

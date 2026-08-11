@@ -26,10 +26,12 @@ WHAT IT DOES
        publications.yml automatically.
 
 USAGE
-    python scripts/cv_to_publications.py [--cv PATH]
+    python scripts/cv_to_publications.py --cv PATH
+    (or set the WACI_CV_PATH environment variable instead of passing --cv)
 """
 import argparse
 import json
+import os
 import re
 import sys
 import unicodedata
@@ -43,7 +45,9 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLICATIONS_PATH = ROOT / "_data" / "publications.yml"
 REVIEW_PATH = ROOT / "_data" / "publications_review.yml"
 CACHE_PATH = ROOT / "scripts" / ".scholar_cache.json"
-DEFAULT_CV = r"C:\PB\At_UIUC\Tenure_track_ap\47-UIUC-Crop Science\Bin_Peng-CV-2026.docx"
+# No hardcoded personal path here (this repo is public) -- set WACI_CV_PATH
+# locally, or pass --cv PATH each run.
+DEFAULT_CV = os.environ.get("WACI_CV_PATH")
 
 THEME_KEYWORDS = {
     "Hydrology": [
@@ -236,6 +240,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cv", default=DEFAULT_CV)
     args = ap.parse_args()
+    if not args.cv:
+        sys.exit("No CV path given. Pass --cv PATH or set the WACI_CV_PATH environment variable.")
 
     lines = extract_cv_text(Path(args.cv))
     citation_lines = isolate_journal_section(lines)

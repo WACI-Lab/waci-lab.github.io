@@ -10,7 +10,8 @@ long time, so the CV-based scripts below are the primary way to keep
 ### `cv_to_publications.py` — pull new papers from the CV
 
 ```bash
-python scripts/cv_to_publications.py [--cv PATH]
+python scripts/cv_to_publications.py --cv PATH
+# or: set WACI_CV_PATH once and omit --cv on every run
 ```
 
 Parses the "JOURNAL PUBLICATIONS" section straight out of Dr. Peng's CV
@@ -40,7 +41,7 @@ unrelated external co-author are the main failure mode (see the
 ### `sync_citation_stats.py` — citation/paper counts
 
 ```bash
-python scripts/sync_citation_stats.py [--cv PATH]
+python scripts/sync_citation_stats.py --cv PATH
 ```
 
 Updates `_data/team.yml`'s `stats.citations`/`stats.papers`. Tries a single
