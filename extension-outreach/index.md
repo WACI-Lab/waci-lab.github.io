@@ -40,5 +40,5 @@ The WACI Lab is committed to translating research into practice for farmers, lan
 
 <div class="callout" style="margin-top:2em;">
   <h3>Working with us</h3>
-  <p style="margin-bottom:0;">If you're a grower, extension educator, or agency partner interested in collaborating on watershed or on-farm work, get in touch at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  <p style="margin-bottom:0;">If you're a grower, extension educator, or agency partner interested in collaborating on on-farm and watershed work, get in touch at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 </div>

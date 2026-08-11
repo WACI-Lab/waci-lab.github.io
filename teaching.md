@@ -19,9 +19,9 @@ permalink: /teaching/
 
 ## Mentoring
 
-We mentor research scientists, postdocs, graduate students, and undergraduate interns across hydrology, agroecosystem modeling, remote sensing, and environmental data science. See the full roster on our <a href="{{ '/team/' | relative_url }}">Team</a> page.
+We mentor research scientists, postdocs, graduate students, and undergraduate interns across hydrology, plant and soil sciences, remote sensing, AI, and environmental data science. See the full roster on our <a href="{{ '/team/' | relative_url }}">Team</a> page.
 
 <div class="callout">
   <h3>Prospective students</h3>
-  <p style="margin-bottom:0;">We welcome graduate committee members and rotation students interested in water-agriculture-conservation research. See <a href="{{ '/hiring/' | relative_url }}">Hiring</a> for open positions, or reach out directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  <p style="margin-bottom:0;">We welcome new group members interested in research related to water-agriculture-conservation and AI for plant, soil, and environmental sciences. See <a href="{{ '/hiring/' | relative_url }}">Hiring</a> for open positions, or reach out directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 </div>
