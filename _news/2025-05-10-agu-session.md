@@ -1,7 +1,7 @@
 ---
 title: "Convening two sessions at AGU Fall Meeting 2025"
 date: 2025-05-10
-category: Talk
+category: Workshop and conference
 excerpt: "Dr. Peng will chair sessions on water, agriculture, and conservation, and on agricultural decarbonization at this year's AGU Fall Meeting."
 image: /assets/img/news/agu-session.jpg
 ---

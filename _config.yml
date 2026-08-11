@@ -52,6 +52,8 @@ nav:
   - title: Research
     url: /research/
     children:
+      - title: Overview
+        url: /research/
       - title: Research Themes
         url: /research/themes/
       - title: Research Projects
@@ -63,6 +65,8 @@ nav:
   - title: Extension & Outreach
     url: /extension-outreach/
     children:
+      - title: Overview
+        url: /extension-outreach/
       - title: Extension Activities
         url: /extension-outreach/extension-activities/
       - title: Extension Materials
@@ -76,6 +80,8 @@ nav:
   - title: Resources
     url: /resources/
     children:
+      - title: Overview
+        url: /resources/
       - title: Datasets
         url: /resources/datasets/
       - title: Models

@@ -1,7 +1,7 @@
 ---
 title: "ASC hosts the Frontiers of Agricultural Nitrogen Symposium"
 date: 2026-06-05
-category: Talk
+category: Workshop and conference
 excerpt: "Dr. Peng joined a panel on agricultural nitrogen measurement at the Beckman Institute symposium."
 image: /assets/img/news/agricultural-nitrogen-symposium.jpg
 ---
