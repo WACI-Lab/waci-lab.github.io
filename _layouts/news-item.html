@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="wrap" style="padding: 56px 0;">
+  <div class="prose">
+    <div class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}</div>
+    {% include news-chip.html category=page.category %}
+    <h1>{{ page.title }}</h1>
+    {%- assign news_image = page.image | default: "/assets/img/waci-logo.svg" -%}
+    <button type="button" class="news-post-banner" data-lightbox-src="{{ news_image | relative_url }}" aria-label="Enlarge photo for {{ page.title }}">
+      <img src="{{ news_image | relative_url }}" alt="">
+    </button>
+    {{ content }}
+    <p><a href="{{ '/news/' | relative_url }}">&larr; Back to news</a></p>
+  </div>
+</div>

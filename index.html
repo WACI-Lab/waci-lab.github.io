@@ -1,0 +1,123 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<section class="hero">
+  <div class="hero-photo-bg" aria-hidden="true">
+    <img src="{{ '/assets/img/home/hero-agricultural-streams-02.jpg' | relative_url }}" alt="">
+  </div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow">Water, Agriculture, and Conservation Innovation Lab · UIUC</div>
+      <h1>Tracing water, nutrients, and carbon through working landscapes.</h1>
+      <p class="lede">The WACI Lab studies how water, nutrient, and carbon cycles shape agricultural productivity and environmental health &mdash; from a single root to a crop field, to an entire watershed, and to the whole Earth system &mdash; using field and lab measurements, computational modeling, remote sensing, and artificial intelligence.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">Explore our research</a>
+        <a class="btn btn-outline" href="{{ '/hiring/' | relative_url }}">We're hiring</a>
+      </div>
+      {%- assign mentee_total = 0 -%}
+      {%- assign mentee_total = mentee_total | plus: site.data.team.current.researchers_staff.size | plus: site.data.team.current.graduate_students.size | plus: site.data.team.current.undergrads_interns.size -%}
+      {%- assign mentee_total = mentee_total | plus: site.data.team.alumni.researchers_staff.size | plus: site.data.team.alumni.graduate_students.size | plus: site.data.team.alumni.undergrads_interns.size -%}
+      <div class="hero-stats">
+        <a class="stat" href="{{ '/research/publications/' | relative_url }}"><strong>{{ site.data.team.stats.papers }}</strong><span>Peer-reviewed papers</span></a>
+        <a class="stat" href="{{ '/research/publications/' | relative_url }}"><strong>{{ site.data.team.stats.citations }}</strong><span>Total citations</span></a>
+        <a class="stat" href="{{ '/teaching/' | relative_url }}"><strong>{{ site.data.courses | size }}</strong><span>Courses instructed</span></a>
+        <a class="stat" href="{{ '/team/' | relative_url }}"><strong>{{ mentee_total }}</strong><span>Students &amp; mentees</span></a>
+        <div class="stat"><strong>20+</strong><span>Extension &amp; outreach events annually</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">What we study</div>
+        <h2>Research questions</h2>
+      </div>
+      <a class="more" href="{{ '/research/themes/' | relative_url }}">All research themes &rarr;</a>
+    </div>
+    <div class="grid grid-3">
+      <div class="card theme-card gold">
+        <div class="card-art"><img src="{{ '/assets/img/home/gene-to-plant-scales.jpg' | relative_url }}" alt="Close-up of young corn plants in soil"></div>
+        <span class="tag gold">Plant &amp; Soil</span>
+        <h3>Gene to plant scales</h3>
+        <p>How do plant-soil and plant-soil-microbe interactions control productivity, nutrient and carbon cycling under different environmental and management conditions?</p>
+      </div>
+      <div class="card theme-card">
+        <div class="card-art"><img src="{{ '/assets/img/home/field-to-watershed-scales.jpg' | relative_url }}" alt="Aerial view of a river winding through farm fields"></div>
+        <span class="tag water">Hydrology &amp; Water Quality</span>
+        <h3>Field to Watershed scales</h3>
+        <p>How do weather variability and human management activities control water, nutrient, and carbon transport from field to watershed scales?</p>
+      </div>
+      <div class="card theme-card crop">
+        <div class="card-art"><img src="{{ '/assets/img/home/regional-to-global-scales.jpg' | relative_url }}" alt="Global satellite map of croplands"></div>
+        <span class="tag">Sustainable Agrifood Systems</span>
+        <h3>Regional to global scales</h3>
+        <p>How can we sustainably manage our landscape for improved production efficiency and environmental quality?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tinted">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Latest</div>
+        <h2>From the lab</h2>
+      </div>
+      <a class="more" href="{{ '/news/' | relative_url }}">All news &rarr;</a>
+    </div>
+    <div class="grid grid-3">
+      {% assign recent_news = site.news | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for item in recent_news %}
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+          <span class="tag clay" style="margin-bottom:0;">{{ item.date | date: "%b %Y" }}</span>
+          {% include news-chip.html category=item.category %}
+        </div>
+        <h3><a href="{{ item.url | relative_url }}" style="color:inherit; text-decoration:none;">{{ item.title }}</a></h3>
+        <p>{{ item.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="block surface">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selected publications</div>
+        <h2>Most-recent publications</h2>
+      </div>
+      <a class="more" href="{{ '/research/publications/' | relative_url }}">All publications &rarr;</a>
+    </div>
+    {%- assign recent_cutoff_year = site.time | date: "%Y" | plus: 0 | minus: 2 -%}
+    {% for group in site.data.publications %}
+      {% if group.year >= recent_cutoff_year %}
+      {% for pub in group.items %}
+        {% if pub.highlight %}
+    {% include pub-entry.html pub=pub year=group.year %}
+        {% endif %}
+      {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="callout" style="display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+      <div>
+        <h3>We're recruiting postdocs and graduate students.</h3>
+        <p style="margin:0; max-width: 56ch;">Five open areas spanning plant-soil and plant-soil-microbe interactions, hydrology and water quality, AI for Science and environmental data science, Earth System Modeling, and Decision Support Systems for digital agriculture and precision conservation.</p>
+      </div>
+      <a class="btn btn-gold" href="{{ '/hiring/' | relative_url }}">View open positions</a>
+    </div>
+  </div>
+</section>

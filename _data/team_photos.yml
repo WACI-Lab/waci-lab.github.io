@@ -1,0 +1,11 @@
+# Group photos for the "We as A Team" subtab on the Team page.
+# Add a new entry at the top each time there's a new group photo --
+# drop the image file in assets/img/team/group/ and reference it here.
+#
+# - image:   /assets/img/team/group/<file>.jpg
+#   caption: what the photo is of
+#   date:    when it was taken (free text, e.g. "Dec 2025")
+
+- image: /assets/img/team/group/agu-2025-new-orleans.jpg
+  caption: WACI at AGU Fall Meeting in New Orleans
+  date: Dec 2025

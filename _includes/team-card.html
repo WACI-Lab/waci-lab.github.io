@@ -1,0 +1,24 @@
+{% assign clean_name = include.person.name | remove: "Dr. " %}
+{% assign parts = clean_name | split: " " %}
+{% assign first_initial = parts.first | slice: 0, 1 %}
+{% assign last_initial = parts.last | slice: 0, 1 %}
+{% assign initials = first_initial | append: last_initial %}
+<div class="team-card">
+  <div class="team-card-avatar {{ include.accent }}">
+    {% if include.person.photo %}
+      <img class="team-card-photo" src="{{ include.person.photo | relative_url }}" alt="{{ include.person.name }}"{% if include.person.photo_position %} style="object-position: {{ include.person.photo_position }};"{% endif %}>
+    {% else %}
+      <span>{{ initials }}</span>
+    {% endif %}
+  </div>
+  <h4 class="team-card-name">{{ include.person.name }}</h4>
+  <div class="team-card-role">{{ include.person.role }}</div>
+  {% if include.person.email or include.person.linkedin or include.person.scholar or include.person.website %}
+  <div class="team-card-links">
+    {% if include.person.email %}<a class="link-chip" href="mailto:{{ include.person.email }}" aria-label="Email" title="Email">{% include icon.html name="email" %}</a>{% endif %}
+    {% if include.person.linkedin %}<a class="link-chip" href="{{ include.person.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">{% include icon.html name="linkedin" %}</a>{% endif %}
+    {% if include.person.scholar %}<a class="link-chip" href="{{ include.person.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">{% include icon.html name="scholar" %}</a>{% endif %}
+    {% if include.person.website %}<a class="link-chip" href="{{ include.person.website }}" target="_blank" rel="noopener" aria-label="Website" title="Website">{% include icon.html name="website" %}</a>{% endif %}
+  </div>
+  {% endif %}
+</div>

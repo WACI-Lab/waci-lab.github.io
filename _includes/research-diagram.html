@@ -1,0 +1,119 @@
+{%- comment -%}
+  Richer schematic diagram for one of the 5 research/hiring areas -- still
+  abstract line art (not a real figure), but more detailed than
+  highlight-art.html's small icons. Usage:
+    {% include research-diagram.html area="plant-soil-microbe" accent="crop" %}
+  area: plant-soil-microbe | field-to-watershed | ai-data-science | earth-system | digital-ag
+  accent: water | gold | crop | clay
+{%- endcomment -%}
+{% case include.accent %}
+  {% when "water" %}{% assign hex = "#1b6472" %}{% assign hex2 = "#3f7a48" %}{% assign tint = "#dbe9ec" %}
+  {% when "gold" %}{% assign hex = "#b98a2e" %}{% assign hex2 = "#8c5a3c" %}{% assign tint = "#f3e6cc" %}
+  {% when "crop" %}{% assign hex = "#3f7a48" %}{% assign hex2 = "#1b6472" %}{% assign tint = "#dfece1" %}
+  {% when "clay" %}{% assign hex = "#8c5a3c" %}{% assign hex2 = "#1b6472" %}{% assign tint = "#ecdfd4" %}
+{% endcase %}
+<svg class="highlight-art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ include.area }} diagram">
+  <rect width="400" height="500" fill="{{ tint }}"/>
+  <g fill="none" stroke="{{ hex }}" stroke-width="1.2" opacity="0.22">
+    <path d="M-20,120 C100,90 140,40 110,-10"/>
+    <path d="M-20,470 C120,440 180,400 150,340 C124,286 200,260 280,280 C360,300 410,270 400,220"/>
+  </g>
+
+  {% case include.area %}
+
+  {% when "plant-soil-microbe" %}
+    <line x1="20" y1="240" x2="380" y2="240" stroke="{{ hex }}" stroke-width="2" opacity="0.5"/>
+    <path d="M200 240 L200 130" fill="none" stroke="{{ hex }}" stroke-width="4" opacity="0.85" stroke-linecap="round"/>
+    <path d="M200 168 C170 164 152 138 148 104 C182 108 200 134 200 168 Z" fill="none" stroke="{{ hex }}" stroke-width="2.6" opacity="0.8" stroke-linejoin="round"/>
+    <path d="M200 190 C230 186 250 158 254 122 C220 126 202 154 200 190 Z" fill="none" stroke="{{ hex }}" stroke-width="2.6" opacity="0.8" stroke-linejoin="round"/>
+    <path d="M200 148 C176 142 158 118 152 86 C182 90 198 114 200 148 Z" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.7" stroke-linejoin="round"/>
+    <path d="M200 240 L200 300 M200 260 C176 274 160 300 150 336 M200 270 C224 284 240 310 250 344 M200 300 C182 312 170 332 162 358 M200 310 C218 322 230 342 238 366" fill="none" stroke="{{ hex }}" stroke-width="2.4" opacity="0.75" stroke-linecap="round"/>
+    <circle cx="140" cy="320" r="7" fill="none" stroke="{{ hex2 }}" stroke-width="2" opacity="0.7"/>
+    <circle cx="262" cy="336" r="6" fill="none" stroke="{{ hex2 }}" stroke-width="2" opacity="0.7"/>
+    <circle cx="168" cy="368" r="5" fill="none" stroke="{{ hex2 }}" stroke-width="2" opacity="0.7"/>
+    <circle cx="234" cy="356" r="7" fill="none" stroke="{{ hex2 }}" stroke-width="2" opacity="0.7"/>
+    <circle cx="200" cy="392" r="5" fill="none" stroke="{{ hex2 }}" stroke-width="2" opacity="0.7"/>
+    <path d="M212 226 l10 -14 m-4 14 h-10 m4 -14 v14" stroke="{{ hex2 }}" stroke-width="2" opacity="0.6" fill="none" stroke-linecap="round"/>
+    <path d="M188 226 l-10 -14" stroke="{{ hex2 }}" stroke-width="2" opacity="0.6" fill="none" stroke-linecap="round"/>
+
+  {% when "field-to-watershed" %}
+    <rect x="130" y="60" width="24" height="16" rx="3" fill="none" stroke="{{ hex }}" stroke-width="2" opacity="0.7"/>
+    <line x1="142" y1="76" x2="142" y2="100" stroke="{{ hex }}" stroke-width="1.6" stroke-dasharray="2 4" opacity="0.5"/>
+    <rect x="60" y="100" width="180" height="90" rx="4" fill="none" stroke="{{ hex }}" stroke-width="2.4" opacity="0.75"/>
+    <line x1="60" y1="122" x2="240" y2="122" stroke="{{ hex }}" stroke-width="1.4" opacity="0.4"/>
+    <line x1="60" y1="145" x2="240" y2="145" stroke="{{ hex }}" stroke-width="1.4" opacity="0.4"/>
+    <line x1="60" y1="168" x2="240" y2="168" stroke="{{ hex }}" stroke-width="1.4" opacity="0.4"/>
+    <circle cx="205" cy="135" r="5" fill="{{ hex2 }}" opacity="0.75"/>
+    <line x1="205" y1="130" x2="205" y2="120" stroke="{{ hex2 }}" stroke-width="1.6" opacity="0.6"/>
+    <path d="M150 190 C150 220 120 230 118 260" fill="none" stroke="{{ hex }}" stroke-width="3" opacity="0.55" stroke-linecap="round"/>
+    <path d="M118 260 C90 300 150 330 130 370 C112 406 190 420 180 460" fill="none" stroke="{{ hex }}" stroke-width="4.5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M180 460 C230 470 300 450 340 470" fill="none" stroke="{{ hex }}" stroke-width="4.5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M130 370 C110 375 96 366 90 350" fill="none" stroke="{{ hex }}" stroke-width="2.4" opacity="0.55" stroke-linecap="round"/>
+    <path d="M180 460 C165 440 168 418 178 400" fill="none" stroke="{{ hex }}" stroke-width="2.4" opacity="0.55" stroke-linecap="round"/>
+
+  {% when "ai-data-science" %}
+    <rect x="60" y="60" width="34" height="24" rx="3" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.75"/>
+    <line x1="94" y1="66" x2="118" y2="52" stroke="{{ hex }}" stroke-width="2" opacity="0.6"/>
+    <line x1="94" y1="78" x2="118" y2="90" stroke="{{ hex }}" stroke-width="2" opacity="0.6"/>
+    <circle cx="200" cy="66" r="12" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.75"/>
+    <path d="M200 54 a12 12 0 0 1 12 12" fill="none" stroke="{{ hex }}" stroke-width="1.6" opacity="0.5"/>
+    <rect x="292" y="54" width="30" height="30" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.75"/>
+    <line x1="292" y1="69" x2="322" y2="69" stroke="{{ hex }}" stroke-width="1.4" opacity="0.5"/>
+    <line x1="307" y1="54" x2="307" y2="84" stroke="{{ hex }}" stroke-width="1.4" opacity="0.5"/>
+    <line x1="77" y1="90" x2="150" y2="170" stroke="{{ hex }}" stroke-width="1.6" opacity="0.4"/>
+    <line x1="200" y1="78" x2="180" y2="170" stroke="{{ hex }}" stroke-width="1.6" opacity="0.4"/>
+    <line x1="307" y1="84" x2="240" y2="170" stroke="{{ hex }}" stroke-width="1.6" opacity="0.4"/>
+    {% assign nodes = "150,180|200,170|250,180|170,230|230,230|200,280" | split: "|" %}
+    <g stroke="{{ hex }}" stroke-width="1.6" opacity="0.5">
+      <line x1="150" y1="180" x2="170" y2="230"/>
+      <line x1="200" y1="170" x2="170" y2="230"/>
+      <line x1="200" y1="170" x2="230" y2="230"/>
+      <line x1="250" y1="180" x2="230" y2="230"/>
+      <line x1="170" y1="230" x2="200" y2="280"/>
+      <line x1="230" y1="230" x2="200" y2="280"/>
+    </g>
+    <circle cx="150" cy="180" r="9" fill="{{ tint }}" stroke="{{ hex }}" stroke-width="2.4" opacity="0.85"/>
+    <circle cx="200" cy="170" r="9" fill="{{ tint }}" stroke="{{ hex }}" stroke-width="2.4" opacity="0.85"/>
+    <circle cx="250" cy="180" r="9" fill="{{ tint }}" stroke="{{ hex }}" stroke-width="2.4" opacity="0.85"/>
+    <circle cx="170" cy="230" r="9" fill="{{ tint }}" stroke="{{ hex }}" stroke-width="2.4" opacity="0.85"/>
+    <circle cx="230" cy="230" r="9" fill="{{ tint }}" stroke="{{ hex }}" stroke-width="2.4" opacity="0.85"/>
+    <circle cx="200" cy="280" r="11" fill="{{ hex2 }}" opacity="0.85"/>
+    <line x1="200" y1="291" x2="200" y2="340" stroke="{{ hex }}" stroke-width="2.4" opacity="0.6"/>
+    <path d="M140 400 L180 370 L220 388 L270 350" fill="none" stroke="{{ hex }}" stroke-width="3" opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="270" cy="350" r="5" fill="{{ hex }}" opacity="0.85"/>
+
+  {% when "earth-system" %}
+    <circle cx="200" cy="220" r="90" fill="none" stroke="{{ hex }}" stroke-width="2.6" opacity="0.8"/>
+    <ellipse cx="200" cy="220" rx="90" ry="34" fill="none" stroke="{{ hex }}" stroke-width="1.6" opacity="0.55"/>
+    <ellipse cx="200" cy="220" rx="36" ry="90" fill="none" stroke="{{ hex }}" stroke-width="1.6" opacity="0.55"/>
+    <path d="M120 260 C150 270 180 280 200 280 C220 280 250 270 280 260" fill="none" stroke="{{ hex2 }}" stroke-width="2.4" opacity="0.7"/>
+    <circle cx="200" cy="130" r="130" fill="none" stroke="{{ hex }}" stroke-width="1.2" stroke-dasharray="3 6" opacity="0.35" transform="translate(0 90)"/>
+    <line x1="130" y1="252" x2="122" y2="230" stroke="{{ hex }}" stroke-width="2.4" opacity="0.7" stroke-linecap="round"/>
+    <line x1="150" y1="264" x2="145" y2="240" stroke="{{ hex }}" stroke-width="2.4" opacity="0.7" stroke-linecap="round"/>
+    <line x1="170" y1="270" x2="168" y2="246" stroke="{{ hex }}" stroke-width="2.4" opacity="0.7" stroke-linecap="round"/>
+    <path d="M120 220 C90 190 96 150 130 130" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.55" stroke-linecap="round"/>
+    <path d="M280 220 C310 190 304 150 270 130" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.55" stroke-linecap="round"/>
+    <path d="M126 134 l4 -10 6 8" fill="none" stroke="{{ hex }}" stroke-width="2" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M274 134 l-4 -10 -6 8" fill="none" stroke="{{ hex }}" stroke-width="2" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+
+  {% when "digital-ag" %}
+    <rect x="90" y="150" width="220" height="170" fill="none" stroke="{{ hex }}" stroke-width="2.6" opacity="0.8"/>
+    <line x1="90" y1="203" x2="310" y2="203" stroke="{{ hex }}" stroke-width="1.6" opacity="0.5"/>
+    <line x1="90" y1="256" x2="310" y2="256" stroke="{{ hex }}" stroke-width="1.6" opacity="0.5"/>
+    <line x1="163" y1="150" x2="163" y2="320" stroke="{{ hex }}" stroke-width="1.6" opacity="0.5"/>
+    <line x1="237" y1="150" x2="237" y2="320" stroke="{{ hex }}" stroke-width="1.6" opacity="0.5"/>
+    <rect x="90" y="150" width="73" height="53" fill="{{ hex2 }}" opacity="0.22"/>
+    <rect x="237" y="203" width="73" height="53" fill="{{ hex2 }}" opacity="0.35"/>
+    <rect x="163" y="256" width="74" height="64" fill="{{ hex2 }}" opacity="0.14"/>
+    <path d="M170 90 l60 10 -14 26 z" fill="none" stroke="{{ hex }}" stroke-width="2.4" opacity="0.8" stroke-linejoin="round"/>
+    <line x1="216" y1="126" x2="205" y2="150" stroke="{{ hex }}" stroke-width="1.6" stroke-dasharray="2 4" opacity="0.55"/>
+    <line x1="185" y1="122" x2="140" y2="150" stroke="{{ hex }}" stroke-width="1.6" stroke-dasharray="2 4" opacity="0.55"/>
+    <line x1="205" y1="98" x2="265" y2="150" stroke="{{ hex }}" stroke-width="1.6" stroke-dasharray="2 4" opacity="0.55"/>
+    <rect x="70" y="360" width="90" height="60" rx="4" fill="none" stroke="{{ hex }}" stroke-width="2.2" opacity="0.75"/>
+    <path d="M85 405 l14 -20 12 12 20 -26" fill="none" stroke="{{ hex2 }}" stroke-width="2.2" opacity="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M250 370 a30 30 0 0 1 60 0" fill="none" stroke="{{ hex }}" stroke-width="2.6" opacity="0.75" stroke-linecap="round"/>
+    <line x1="280" y1="400" x2="298" y2="378" stroke="{{ hex2 }}" stroke-width="2.2" opacity="0.8" stroke-linecap="round"/>
+    <circle cx="280" cy="400" r="4" fill="{{ hex2 }}" opacity="0.85"/>
+
+  {% endcase %}
+</svg>

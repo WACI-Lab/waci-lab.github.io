@@ -1,0 +1,105 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>WACI Lab</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">{{ site.subtitle }}</a></li>
+          <li><a href="{{ site.department_url }}">{{ site.department }}</a></li>
+          <li><a href="{{ site.college_url }}">{{ site.college }}</a></li>
+          <li><a href="{{ site.university_url }}">{{ site.university }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+          <li><a href="{{ '/team/' | relative_url }}">Team</a></li>
+          <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+          <li><a href="{{ '/hiring/' | relative_url }}">Hiring</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="{{ site.google_scholar }}">Google Scholar</a></li>
+          <li><a href="{{ site.github_org }}">GitHub</a></li>
+          <li><a href="{{ site.orcid }}">ORCID</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ site.pi_name }} · {{ site.address }}</span>
+      <span>&copy; {{ 'now' | date: "%Y" }} WACI Lab, UIUC</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // Site-wide click-to-enlarge lightbox. Any element with a
+    // data-lightbox-src attribute (e.g. .pub-thumb buttons) opens it.
+    var overlay, imgEl;
+
+    function ensureOverlay() {
+      if (overlay) return;
+      overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.innerHTML =
+        '<button type="button" class="lightbox-close" aria-label="Close">&times;</button>' +
+        '<img class="lightbox-img" alt="">';
+      document.body.appendChild(overlay);
+      imgEl = overlay.querySelector('.lightbox-img');
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay || e.target.classList.contains('lightbox-close')) closeLightbox();
+      });
+    }
+
+    function openLightbox(src, alt) {
+      ensureOverlay();
+      imgEl.src = src;
+      imgEl.alt = alt || '';
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!overlay) return;
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (e) {
+      var trigger = e.target.closest('[data-lightbox-src]');
+      if (!trigger) return;
+      var src = trigger.getAttribute('data-lightbox-src');
+      if (!src) return;
+      var innerImg = trigger.querySelector('img');
+      openLightbox(src, innerImg ? innerImg.alt : '');
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+
+  (function () {
+    // Any link pointing to a different hostname (Google Scholar, DOIs,
+    // GitHub, university sites, etc.) opens in a new tab instead of
+    // navigating away from the site. Internal links (relative, or absolute
+    // links to this same hostname) are left alone. Covers links added via
+    // Liquid and plain markdown links inside news posts alike, since it
+    // runs against the rendered page rather than per-template.
+    document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+      try {
+        if (new URL(a.href).hostname !== window.location.hostname) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+      } catch (e) {}
+    });
+  })();
+</script>

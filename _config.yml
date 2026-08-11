@@ -1,0 +1,101 @@
+title: WACI Lab
+subtitle: Water, Agriculture, and Conservation Innovation Lab
+description: >-
+  The WACI Lab at the University of Illinois Urbana-Champaign studies the
+  water, nutrient, and carbon cycles that connect agricultural landscapes to
+  productivity and environmental sustainability, using field measurement,
+  systems modeling, remote sensing, and artificial intelligence.
+url: "https://waci-lab.github.io"
+baseurl: ""
+
+pi_name: Dr. Bin Peng
+department: Department of Crop Sciences
+department_url: "https://cropsciences.illinois.edu/"
+college: College of Agricultural, Consumer & Environmental Sciences
+college_url: "https://aces.illinois.edu/"
+university: University of Illinois Urbana-Champaign
+university_url: "https://illinois.edu/"
+address: "AW-101 Turner Hall, MC-046, 1102 S. Goodwin Ave., Urbana, IL 61801"
+email: binpeng@illinois.edu
+github_org: "https://github.com/waci-Lab"
+google_scholar: "https://scholar.google.com.hk/citations?user=tkya-dMAAAAJ&hl=en"
+twitter: "https://twitter.com/pengbinpeluo"
+linkedin: "https://linkedin.com/in/bin-peng-502a435a/"
+orcid: "https://orcid.org/0000-0002-7284-3010"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+collections:
+  news:
+    output: true
+    permalink: /news/:path/
+  team:
+    output: false
+  projects:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: news-item
+
+nav:
+  - title: Home
+    url: /
+  - title: Team
+    url: /team/
+  - title: Research
+    url: /research/
+    children:
+      - title: Research Themes
+        url: /research/themes/
+      - title: Research Projects
+        url: /research/projects/
+      - title: Publications
+        url: /research/publications/
+  - title: Teaching
+    url: /teaching/
+  - title: Extension & Outreach
+    url: /extension-outreach/
+    children:
+      - title: Extension Activities
+        url: /extension-outreach/extension-activities/
+      - title: Extension Materials
+        url: /extension-outreach/extension-materials/
+      - title: Outreach Activities
+        url: /extension-outreach/outreach-activities/
+      - title: Community Services
+        url: /extension-outreach/community-services/
+  - title: WETest
+    url: /wetest/
+  - title: Resources
+    url: /resources/
+    children:
+      - title: Datasets
+        url: /resources/datasets/
+      - title: Models
+        url: /resources/models/
+      - title: Lab Resources
+        url: /resources/lab-resources/
+  - title: News
+    url: /news/
+  - title: Hiring
+    url: /hiring/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - scripts
+  - assets/img/team/README.md
+  - assets/img/research/funders/README.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

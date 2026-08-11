@@ -1,0 +1,17 @@
+# Maps a journal's exact name (must match the `journal:` field used in
+# _data/publications.yml) to a small cover-image badge shown next to that
+# journal's name in the publications list. Add a journal once here and
+# every paper published in it picks up the badge automatically -- no need
+# to repeat the image on each individual publication entry.
+#
+# Journals not listed here just show their name as plain text, same as
+# before this feature existed.
+
+"Hydrology and Earth System Sciences": /assets/img/journals/hess-cover.jpg
+"Environmental Research: Water": /assets/img/journals/erw-cover.jpg
+"Environmental Science & Technology": /assets/img/journals/est-cover.jpg
+"ISPRS Journal of Photogrammetry and Remote Sensing": /assets/img/journals/isprs-cover.jpg
+"Journal of Advances in Modeling Earth Systems": /assets/img/journals/james-cover.jpg
+"Vadose Zone Journal": /assets/img/journals/vzj-cover.jpg
+"Water Research": /assets/img/journals/water-research-cover.jpg
+"Proceedings of the National Academy of Sciences": /assets/img/journals/pnas-cover.jpg

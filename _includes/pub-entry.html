@@ -1,0 +1,48 @@
+{%- comment -%}
+  Shared publication row: two same-size thumbnails to the left (journal-
+  cover badge first if registered, then the article highlight figure) +
+  title/meta/chips to the right. Real images are click-to-enlarge (see the
+  lightbox script in _includes/footer.html); the generated fallback art is
+  not. The "PI corresponding / lead author" badge sits in the chip row,
+  before the theme chips. Author names render from `authors_html` (bold
+  Peng, bold-italic-underline for lab members -- see
+  scripts/format_authors.py) when present, else fall back to plain
+  `authors`.
+  Usage: {% include pub-entry.html pub=pub %}
+    Optional params: year=... (shown in the journal line), number=...
+    (reverse-order index shown before the title), bucket=... (year-bucket
+    string, set as data-bucket for the year filter on the publications page)
+{%- endcomment -%}
+{%- assign journal_cover = site.data.journal_covers[include.pub.journal] -%}
+<div class="pub"{% if include.pub.themes %} data-themes="{{ include.pub.themes | join: '|' }}"{% endif %}{% if include.pub.highlight %} data-highlight="true"{% endif %}{% if include.bucket %} data-bucket="{{ include.bucket }}"{% endif %}>
+  <div class="pub-media">
+    {% if journal_cover %}
+    <button type="button" class="pub-thumb" data-lightbox-src="{{ journal_cover | relative_url }}" aria-label="Enlarge {{ include.pub.journal }} cover">
+      <img src="{{ journal_cover | relative_url }}" alt="{{ include.pub.journal }} cover">
+    </button>
+    {% endif %}
+    {% if include.pub.highlight_image %}
+    <button type="button" class="pub-thumb" data-lightbox-src="{{ include.pub.highlight_image | relative_url }}" aria-label="Enlarge highlight figure for {{ include.pub.title }}">
+      <img src="{{ include.pub.highlight_image | relative_url }}" alt="Highlight figure for {{ include.pub.title }}">
+    </button>
+    {% elsif include.pub.themes %}
+    <div class="pub-thumb">
+      {% include highlight-art.html theme=include.pub.themes.first %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="pub-body">
+    {% if include.number %}<span class="pub-number">{{ include.number }}</span>{% endif %}
+    <div class="pub-content">
+      <a class="pub-title" href="{{ include.pub.url }}">{{ include.pub.title }}</a>
+      <span class="pub-meta">{{ include.pub.authors_html | default: include.pub.authors }}</span>
+      <span class="pub-journal-line"><em class="pub-journal">{{ include.pub.journal }}</em>{% if include.year %} &middot; {{ include.year }}{% endif %}{% if include.pub.note %} &middot; {{ include.pub.note }}{% endif %}</span>
+      {% if include.pub.highlight or include.pub.themes %}
+      <div class="chip-row">
+        {% if include.pub.highlight %}<span class="pub-badge">PI corresponding / lead author</span>{% endif %}
+        {% if include.pub.themes %}{% include pub-chips.html themes=include.pub.themes %}{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

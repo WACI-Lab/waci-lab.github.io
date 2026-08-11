@@ -1,0 +1,10 @@
+{% for t in include.themes %}
+  {% case t %}
+    {% when "Hydrology", "Water quality" %}{% assign accent = "water" %}
+    {% when "Earth system", "Land management", "Conservation" %}{% assign accent = "gold" %}
+    {% when "Crop and soil" %}{% assign accent = "crop" %}
+    {% when "Remote sensing", "Modeling", "AI", "Measurement" %}{% assign accent = "clay" %}
+    {% else %}{% assign accent = "" %}
+  {% endcase %}
+  <span class="chip {{ accent }}">{{ t }}</span>
+{% endfor %}

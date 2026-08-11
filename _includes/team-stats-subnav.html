@@ -1,0 +1,20 @@
+{%- assign cur_rs = site.data.team.current.researchers_staff | size -%}
+{%- assign cur_gs = site.data.team.current.graduate_students | size -%}
+{%- assign cur_ui = site.data.team.current.undergrads_interns | size -%}
+{%- assign alum_rs = site.data.team.alumni.researchers_staff | size -%}
+{%- assign alum_gs = site.data.team.alumni.graduate_students | size -%}
+{%- assign alum_ui = site.data.team.alumni.undergrads_interns | size -%}
+{%- assign alum_total = alum_rs | plus: alum_gs | plus: alum_ui -%}
+
+<div class="hero-stats" style="margin: 0 0 2.6em; padding-bottom: 2.2em; border-bottom: 1px solid var(--surface-line);">
+  <div class="stat"><strong>{{ cur_rs }}</strong><span>Researchers &amp; staff</span></div>
+  <div class="stat"><strong>{{ cur_gs }}</strong><span>Grad students</span></div>
+  <div class="stat"><strong>{{ cur_ui }}</strong><span>Undergrads &amp; interns</span></div>
+  <div class="stat"><strong>{{ alum_total }}</strong><span>Lab alumni</span></div>
+</div>
+
+<nav class="subnav" aria-label="Team section" style="margin-bottom: 2.6em;">
+  <a href="{{ '/team/' | relative_url }}" class="{% if page.url == '/team/' %}active{% endif %}">Current Members</a>
+  <a href="{{ '/team/alumni/' | relative_url }}" class="{% if page.url == '/team/alumni/' %}active{% endif %}">Lab Alumni</a>
+  <a href="{{ '/team/photos/' | relative_url }}" class="{% if page.url == '/team/photos/' %}active{% endif %}">We as A Team</a>
+</nav>

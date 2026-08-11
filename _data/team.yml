@@ -1,0 +1,224 @@
+stats:
+  papers: "100"
+  citations: "7158"
+
+# Optional per-person fields (anywhere under current/alumni, and pi below):
+#   photo:    /assets/img/team/<file>.jpg  -- drop the file in that folder; falls back to initials if unset
+#   email:    person's email address -- rendered as a mailto: link
+#   linkedin: full LinkedIn profile URL
+#   scholar:  full Google Scholar profile URL
+#   website:  personal / lab-page URL
+# All are optional -- commented-out lines below are placeholders; fill in a
+# value and uncomment to make the link appear. Leave commented/unset and the
+# card just shows initials with no link row (or fewer links).
+#
+# When someone leaves the lab, cut their entry from the matching `current.*`
+# list and paste it into the same-named `alumni.*` list.
+
+pi:
+  name: Dr. Bin Peng
+  role: Assistant Professor
+  bio: >-
+    Dr. Peng leads the WACI Lab and studies how water, nutrient, and carbon
+    cycles connect agricultural productivity to environmental sustainability,
+    combining field and lab measurement, computational modeling, remote
+    sensing, and AI.
+  photo: /assets/img/team/bin-peng.jpg
+  links:
+    website: "https://pengbinpeluo.github.io/"
+    scholar: "https://scholar.google.com.hk/citations?user=tkya-dMAAAAJ&hl=en"
+    orcid: "https://orcid.org/0000-0002-7284-3010"
+    github: "https://github.com/pengbinpeluo"
+
+current:
+  researchers_staff:
+    - name: Michael P. Wallace
+      role: Research Specialist
+      photo: /assets/img/team/michael-wallace.jpeg
+      email: mwallace@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Dr. Mengqi Jia
+      role: Research Scientist
+      photo: /assets/img/team/mengqi-jia.jpeg
+      email: mengqij@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Dr. Yaji Wang
+      role: Postdoctoral Researcher
+      photo: /assets/img/team/yaji-wang.webp
+      email: yjwang@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Dr. Jie Yang
+      role: Postdoctoral Researcher
+      photo: /assets/img/team/jie-yang.webp
+      email: jieyang7@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Dr. Wencheng Qi
+      role: Postdoctoral Researcher
+      photo: /assets/img/team/wencheng-qi.webp
+      email: wencheng@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+
+  graduate_students:
+    - name: Qianyu Zhao
+      role: Graduate Student
+      photo: /assets/img/team/qianyu-zhao.png
+      email: qz29@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Jiawei Fan
+      role: Graduate Student
+      photo: /assets/img/team/jiawei-fan.webp
+      email: jiaweif6@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Huan Liu
+      role: Graduate Student
+      photo: /assets/img/team/huan-liu.jpg
+      photo_position: "center 10%"
+      email: huanl4@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Yuanxin Song
+      role: Graduate Student
+      photo: /assets/img/team/yuanxin-song.jpg
+      photo_position: "center 10%"
+      email: yuanxin7@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Haoyuan Yu
+      role: Graduate Student
+      photo: /assets/img/team/haoyuan-yu.jpeg
+      email: hy65@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Qiaoyu Qu
+      role: Graduate Student
+      photo: /assets/img/team/qiaoyu-qu.webp
+      email: qiaoyuq2@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Runting Chen
+      role: Graduate Student
+      # photo: ""
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Shijia Wang
+      role: Graduate Student
+      # photo: ""
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+
+  undergrads_interns:
+    - name: Shuwan Xu
+      role: Undergraduate Intern, Computer Science (2026)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Xinghan Chen
+      role: Undergraduate Intern, Computer Science (SPIN, 2026)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+
+alumni:
+  researchers_staff: []
+
+  graduate_students:
+    - name: Zewei Ma
+      role: PhD Student (NRES, 2024-2026)
+      photo: /assets/img/team/zewei-ma.jpeg
+      email: zeweima2@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+
+  undergrads_interns:
+    - name: Bowen Song
+      role: Undergraduate Intern (SPIN, 2018)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Brian Yan
+      role: Undergraduate Intern (SPIN, 2019)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Junrui Ni
+      role: Undergraduate Intern (SPIN, 2019)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Nimisha Jasuja
+      role: Graduate Intern, Informatics (2022)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Yihong Jian
+      role: Undergraduate Intern (SPIN, 2021)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Chen Song
+      role: Undergraduate Intern (SPIN, 2021)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Isabelle Wagenvoord
+      role: Undergraduate Intern (REU, 2022)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Chaitanya Deshpande
+      role: Graduate Intern, Computer Science (2026)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Liza George
+      role: Undergraduate Intern, Computer Science (2024)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Logan Bend
+      role: Undergraduate Intern, ACE (2024)
+      photo: /assets/img/team/logan-bend.jpg
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
+    - name: Carson Splear
+      role: Undergraduate Intern, ACE (2025)
+      # email: ""
+      # linkedin: ""
+      # scholar: ""
+      # website: ""

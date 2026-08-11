@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<section class="page-hero">
+  {% include contours.html %}
+  <div class="wrap">
+    {% if page.eyebrow %}<div class="eyebrow">{{ page.eyebrow }}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede" style="max-width:680px;">{{ page.description }}</p>{% endif %}
+  </div>
+</section>
+
+{% if page.subnav %}
+<div class="wrap">
+  <nav class="subnav" aria-label="Section">
+    {% for item in page.subnav %}
+    <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
+    {% endfor %}
+  </nav>
+</div>
+{% endif %}
+
+<div class="wrap">
+  <div class="{% if page.wide %}prose-wide{% else %}prose{% endif %}">
+    {{ content }}
+  </div>
+</div>
+<div style="height: 64px"></div>

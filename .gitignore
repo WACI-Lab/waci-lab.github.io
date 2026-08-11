@@ -1,0 +1,17 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+
+# local working files from scripts/sync_publications.py -- not site content
+scripts/.scholar_cache.json
+_data/publications_review.yml
+scripts/__pycache__/
+scripts/*.log
+*.bak
+
+# personal machine-local Claude Code permission grants -- not shared config
+.claude/settings.local.json

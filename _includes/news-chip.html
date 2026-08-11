@@ -1,0 +1,13 @@
+{% if include.category %}
+  {% case include.category %}
+    {% when "Paper" %}{% assign accent = "gold" %}
+    {% when "Talk" %}{% assign accent = "water" %}
+    {% when "Recruiting" %}{% assign accent = "crop" %}
+    {% when "Award" %}{% assign accent = "gold" %}
+    {% when "Grant" %}{% assign accent = "crop" %}
+    {% when "Milestone" %}{% assign accent = "water" %}
+    {% when "Feature" %}{% assign accent = "clay" %}
+    {% else %}{% assign accent = "clay" %}
+  {% endcase %}
+  <span class="chip {{ accent }}">{{ include.category }}</span>
+{% endif %}

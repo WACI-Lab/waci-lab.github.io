@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WACI Lab">
+  <rect width="1200" height="900" fill="#f6f5f1"/>
+  <g transform="translate(600,368) scale(9.5) translate(-17,-17)">
+    <circle cx="17" cy="17" r="16" fill="none" stroke="#143a41" stroke-width="1.4"/>
+    <path d="M17 6 C11 13 8 17 8 21 a9 9 0 0 0 18 0 C26 17 23 13 17 6 Z" fill="none" stroke="#1b6472" stroke-width="1.4"/>
+    <path d="M9 20 h16" stroke="#3f7a48" stroke-width="1.2"/>
+  </g>
+  <text x="600" y="660" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#143a41">WACI Lab</text>
+  <text x="600" y="712" text-anchor="middle" font-family="'Courier New', monospace" font-size="30" letter-spacing="1" fill="#56635c">WATER &#183; AGRICULTURE &#183; CONSERVATION</text>
+</svg>
