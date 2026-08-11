@@ -263,11 +263,12 @@ nav.primary-nav .submenu a:hover { background: var(--bg-mist); color: var(--ink)
   /* On narrow screens the hero text stack (h1 + lede + 5 stats) makes the
      section very tall relative to its width, which forces this
      object-fit:cover photo into a portrait-ish box -- only a thin sliver
-     of it stays visible. It was already ~half-hidden behind the gradient
-     above even on desktop, so dropping it here (falls back to the plain
-     --bg color already used at the gradient's left edge) is a smaller
-     visual change than showing a heavily cropped, distorted photo. */
-  .hero-photo-bg { display: none; }
+     of it stays visible either way. Rather than hide it, pin the crop to
+     the photo's right-hand side (river bend + fields, not empty sky) so
+     that sliver is always something recognizable -- same region desktop's
+     gradient already emphasizes by fading the photo in toward the right.
+     Vertical position matches the source article's own object-position. */
+  .hero-photo-bg img { object-position: right 35%; }
 }
 .hero .wrap { position: relative; z-index: 1; }
 .hero-inner { max-width: 720px; }
