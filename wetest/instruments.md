@@ -62,7 +62,6 @@ subnav:
         <span class="chip water">Phosphate</span>
         <span class="chip water">Major cations</span>
       </div>
-      <p style="margin-top:12px; font-size:0.85rem; color:var(--text-muted);">Photo pending.</p>
     </div>
   </div>
 
@@ -78,7 +77,6 @@ subnav:
         <span class="chip gold">Non-purgeable organic carbon</span>
         <span class="chip gold">Total nitrogen (optional)</span>
       </div>
-      <p style="margin-top:12px; font-size:0.85rem; color:var(--text-muted);">Photo pending.</p>
     </div>
   </div>
 
