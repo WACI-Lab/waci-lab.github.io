@@ -261,14 +261,31 @@ nav.primary-nav .submenu a:hover { background: var(--bg-mist); color: var(--ink)
 }
 @media (max-width: 700px) {
   /* On narrow screens the hero text stack (h1 + lede + 5 stats) makes the
-     section very tall relative to its width, which forces this
-     object-fit:cover photo into a portrait-ish box -- only a thin sliver
-     of it stays visible either way. Rather than hide it, pin the crop to
-     the photo's right-hand side (river bend + fields, not empty sky) so
-     that sliver is always something recognizable -- same region desktop's
-     gradient already emphasizes by fading the photo in toward the right.
-     Vertical position matches the source article's own object-position. */
-  .hero-photo-bg img { object-position: right 35%; }
+     section very tall relative to its width. Rather than stretch the photo
+     to match that ballooned height (which crushes it into a portrait box
+     and crops away most of its width), give it its own bounded aspect
+     ratio instead -- close to the source photo's real ~1.75:1 -- so it
+     reads as a proper banner at the top with barely any crop, and the
+     text stack continues below it in normal flow instead of overlapping.
+     The left-to-right desktop gradient (for revealing the photo beside the
+     text column) doesn't apply here since text is full-width on mobile;
+     swap it for a bottom fade so the photo blends into the page before
+     the text begins. */
+  .hero { padding-top: 0; }
+  .hero-photo-bg {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 28px;
+  }
+  .hero-photo-bg img {
+    position: absolute;
+    inset: 0;
+    object-position: center 35%;
+  }
+  .hero-photo-bg::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, var(--bg) 100%);
+  }
 }
 .hero .wrap { position: relative; z-index: 1; }
 .hero-inner { max-width: 720px; }
