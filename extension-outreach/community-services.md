@@ -24,10 +24,10 @@ subnav:
     <ul>
       <li>Editorial Advisor, <em>Plants, People, Planet</em> (PPP), New Phytologist Foundation, 2026&ndash;present</li>
       <li>Topic Editor, <em>Geoscientific Model Development</em>, European Geosciences Union, 2026&ndash;present</li>
-      <li>Associate Editor, <em>Agronomy Journal</em> (IF=2.240), American Society of Agronomy (ASA), 2020&ndash;present</li>
+      <li>Associate Editor, <em>Agronomy Journal</em>, American Society of Agronomy (ASA), 2020&ndash;present</li>
       <li>Associate Editor (2022&ndash;present) and Guest Associate Editor (2020&ndash;2022), <em>Frontiers in Big Data</em></li>
-      <li>Topic Editor and Review Board Member, <em>Remote Sensing</em> (IF=4.848), 2020&ndash;present</li>
-      <li>Guest Editor, <em>Sensors</em> (IF=3.847), 2022&ndash;present</li>
+      <li>Topic Editor and Review Board Member, <em>Remote Sensing</em>, 2020&ndash;present</li>
+      <li>Guest Editor, <em>Sensors</em>, 2022&ndash;present</li>
       <li>Young Editorial Board member, <em>Journal of Remote Sensing</em>, 2022&ndash;present</li>
     </ul>
   </div>
