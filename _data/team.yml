@@ -70,21 +70,21 @@ current:
 
   graduate_students:
     - name: Qianyu Zhao
-      role: Graduate Student
+      role: PhD Student
       photo: /assets/img/team/qianyu-zhao.png
       email: qz29@illinois.edu
       # linkedin: ""
       # scholar: ""
       # website: ""
     - name: Jiawei Fan
-      role: Graduate Student
+      role: PhD Student
       photo: /assets/img/team/jiawei-fan.webp
       email: jiaweif6@illinois.edu
       # linkedin: ""
       # scholar: ""
       # website: ""
     - name: Huan Liu
-      role: Graduate Student
+      role: PhD Student
       photo: /assets/img/team/huan-liu.jpg
       photo_position: "center 10%"
       email: huanl4@illinois.edu
@@ -92,7 +92,7 @@ current:
       # scholar: ""
       # website: ""
     - name: Yuanxin Song
-      role: Graduate Student
+      role: PhD Student
       photo: /assets/img/team/yuanxin-song.jpg
       photo_position: "center 10%"
       email: yuanxin7@illinois.edu
@@ -100,28 +100,28 @@ current:
       # scholar: ""
       # website: ""
     - name: Haoyuan Yu
-      role: Graduate Student
+      role: PhD Student
       photo: /assets/img/team/haoyuan-yu.jpeg
       email: hy65@illinois.edu
       # linkedin: ""
       # scholar: ""
       # website: ""
     - name: Qiaoyu Qu
-      role: Graduate Student
+      role: PhD Student
       photo: /assets/img/team/qiaoyu-qu.webp
       email: qiaoyuq2@illinois.edu
       # linkedin: ""
       # scholar: ""
       # website: ""
     - name: Runting Chen
-      role: Graduate Student
+      role: PhD Student
       # photo: ""
       # email: ""
       # linkedin: ""
       # scholar: ""
       # website: ""
     - name: Shijia Wang
-      role: Graduate Student
+      role: PhD Student
       # photo: ""
       # email: ""
       # linkedin: ""
