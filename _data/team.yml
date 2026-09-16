@@ -144,6 +144,7 @@ current:
     - name: Will Capito
       role: Undergraduate Intern
       photo: /assets/img/team/will-capito.jpg
+      photo_position: "center 10%"
       email: wcapito2@illinois.edu
       # linkedin: ""
       # scholar: ""
