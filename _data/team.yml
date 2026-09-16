@@ -141,6 +141,13 @@ current:
       # linkedin: ""
       # scholar: ""
       # website: ""
+    - name: Will Capito
+      role: Undergraduate Intern
+      photo: /assets/img/team/will-capito.jpg
+      email: wcapito2@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
 
 alumni:
   researchers_staff: []
