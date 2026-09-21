@@ -149,6 +149,14 @@ current:
       # linkedin: ""
       # scholar: ""
       # website: ""
+    - name: Jake Fujiwara
+      role: Undergraduate Intern
+      photo: /assets/img/team/jake-fujiwara.jpg
+      photo_position: "center 35%"
+      email: jakef2@illinois.edu
+      # linkedin: ""
+      # scholar: ""
+      # website: ""
 
 alumni:
   researchers_staff: []
